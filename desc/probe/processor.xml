@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE probedesc PUBLIC "-//jrds//DTD Probe Description//EN" "urn:jrds:probedesc">
+<probedesc>
+    <name>PerfOS_Processor</name>
+    <probeName>processor${index}</probeName>
+    <probeClass>jrds.wmi.WMIProbeIndexed</probeClass>
+    <specific name="wbemClass">Win32_PerfRawData_PerfOS_Processor</specific>
+    <specific name="key">Name</specific>
+    <defaultargs>
+        <arg type="String" value="_Total" />
+    </defaultargs>
+    <ds>
+        <dsName>C1Time</dsName>
+        <dsType>counter</dsType>
+        <collect>PercentC1Time#PERF_100NSEC_TIMER</collect>
+    </ds>
+    <ds>
+        <dsName>C2Time</dsName>
+        <dsType>counter</dsType>
+        <collect>PercentC2Time</collect>
+    </ds>
+    <ds>
+        <dsName>C3Time</dsName>
+        <dsType>counter</dsType>
+        <collect>PercentC3Time#PERF_100NSEC_TIMER</collect>
+    </ds>
+    <ds>
+        <dsName>DPCTime</dsName>
+        <dsType>counter</dsType>
+        <collect>PercentC3Time#PERF_100NSEC_TIMER</collect>
+    </ds>
+    <ds>
+        <dsName>IdleTime</dsName>
+        <dsType>counter</dsType>
+        <collect>PercentIdleTime#PERF_100NSEC_TIMER</collect>
+    </ds>
+    <ds>
+        <dsName>InterruptTime</dsName>
+        <dsType>counter</dsType>
+        <collect>PercentInterruptTime#PERF_100NSEC_TIMER</collect>
+    </ds>
+    <ds>
+        <dsName>PrivilegedTime</dsName>
+        <dsType>counter</dsType>
+        <collect>PercentPrivilegedTime#PERF_100NSEC_TIMER</collect>
+    </ds>
+    <ds>
+        <dsName>ProcessorTime</dsName>
+        <dsType>counter</dsType>
+        <collect>PercentProcessorTime#PERF_100NSEC_TIMER_INV</collect>
+    </ds>
+    <ds>
+        <dsName>UserTime</dsName>
+        <dsType>counter</dsType>
+        <collect>PercentUserTime#PERF_100NSEC_TIMER</collect>
+    </ds>
+    <graphs>
+        <name>PerfOS_Processor-time</name>
+    </graphs>
+</probedesc>

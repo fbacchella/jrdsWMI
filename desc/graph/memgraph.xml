@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE graphdesc PUBLIC "-//jrds//DTD Graph Description//EN"
+                           "urn:jrds:graphdesc">
+<graphdesc>
+    <name>Win32Mem</name>
+    <graphName>memory</graphName>
+    <graphTitle>Memory usage on ${host}</graphTitle>
+    <unit>
+        <binary />
+    </unit>
+    <verticalLabel>Bytes</verticalLabel>
+    <add>
+        <name>CommitLimit</name>
+        <graphType>area</graphType>
+    </add>
+    <add>
+        <name>CommittedBytes</name>
+        <graphType>area</graphType>
+    </add>
+    <add>
+        <name>CacheBytes</name>
+        <graphType>stack</graphType>
+    </add>
+    <add>
+        <name>AvailableBytes</name>
+        <graphType>stack</graphType>
+    </add>
+    <hosttree>
+        <pathelement>HOST</pathelement>
+        <pathelement>SYSTEM</pathelement>
+        <pathelement>MEMORY</pathelement>
+        <pathstring>Memory usage</pathstring>
+    </hosttree>
+    <viewtree>
+        <pathelement>SYSTEM</pathelement>
+        <pathelement>MEMORY</pathelement>
+        <pathstring>Memory usage</pathstring>
+        <pathelement>HOST</pathelement>
+    </viewtree>
+</graphdesc>

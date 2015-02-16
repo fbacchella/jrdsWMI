@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE graphdesc PUBLIC "-//jrds//DTD Graph Description//EN" "urn:jrds:graphdesc">
+<graphdesc>
+    <name>Win32_Process-threads</name>
+    <graphName>psthreads-${index}</graphName>
+    <graphTitle>Thread and process count for ${index}</graphTitle>
+    <verticalLabel>Threads</verticalLabel>
+    <lowerLimit>0</lowerLimit>
+    <add>
+        <name>ProcessCount</name>
+        <graphType>line</graphType>
+        <legend>Number of process</legend>
+    </add>
+    <add>
+        <name>ThreadCount</name>
+        <graphType>line</graphType>
+        <legend>Number of threads</legend>
+    </add>
+    <hosttree>
+        <pathelement>HOST</pathelement>
+        <pathelement>SYSTEM</pathelement>
+        <pathstring>Processus</pathstring>
+        <pathelement>INDEX</pathelement>
+        <pathstring>Threads count</pathstring>
+    </hosttree>
+    <viewtree>
+        <pathelement>SYSTEM</pathelement>
+        <pathstring>Processus</pathstring>
+        <pathelement>HOST</pathelement>
+        <pathelement>INDEX</pathelement>
+        <pathstring>Threads count</pathstring>
+    </viewtree>
+</graphdesc>

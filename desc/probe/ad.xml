@@ -1,0 +1,51 @@
+<!DOCTYPE probedesc PUBLIC "-//jrds//DTD Probe Description//EN" "urn:jrds:probedesc">
+<probedesc>
+    <name>NTDS_NTDS</name>
+    <probeName>ntds</probeName>
+    <probeClass>jrds.wmi.WMIProbe</probeClass>
+    <specific name="wbemClass">Win32_PerfRawData_NTDS_NTDS</specific>
+    <ds>
+        <dsName>LDAPClientSessions</dsName>
+        <dsType>gauge</dsType>
+    </ds>
+    <ds>
+        <dsName>DSDirectorySearches</dsName>
+        <dsType>counter</dsType>
+        <collect>DSDirectorySearchesPersec</collect>
+    </ds>
+    <ds>
+        <dsName>DSDirectoryReads</dsName>
+        <dsType>counter</dsType>
+        <collect>DSDirectoryReadsPersec</collect>
+    </ds>
+    <ds>
+        <dsName>DSDirectoryWrites</dsName>
+        <dsType>counter</dsType>
+        <collect>DSDirectoryWritesPersec</collect>
+    </ds>
+    <ds>
+        <dsName>ABBrowses</dsName>
+        <dsType>counter</dsType>
+        <collect>ABBrowsesPersec</collect>
+    </ds>
+    <ds>
+        <dsName>LDAPSuccessfulBinds</dsName>
+        <dsType>counter</dsType>
+        <collect>LDAPSuccessfulBindsPersec</collect>
+    </ds>
+    <ds>
+        <dsName>LDAPSearches</dsName>
+        <dsType>counter</dsType>
+        <collect>LDAPSearchesPersec</collect>
+    </ds>
+    <ds>
+        <dsName>LDAPWrites</dsName>
+        <dsType>counter</dsType>
+        <collect>LDAPWritesPersec</collect>
+    </ds>
+    <graphs>
+        <name>ADLDAPOperations</name>
+        <name>LDAPSessions</name>
+    </graphs>
+</probedesc>
+<!-- LDAPNewConnectionsPersec LDAPNewSSLConnectionsPersec -->

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE probedesc PUBLIC "-//jrds//DTD Probe Description//EN" "urn:jrds:probedesc">
+<probedesc>
+    <name>PerfOS_System</name>
+    <probeName>system</probeName>
+    <probeClass>jrds.wmi.WMIProbe</probeClass>
+    <specific name="wbemClass">Win32_PerfRawData_PerfOS_System</specific>
+    <ds>
+        <dsName>Processes</dsName>
+        <dsType>gauge</dsType>
+        <collect>Processes#PERF_COUNTER_RAWCOUNT</collect>
+    </ds>
+    <ds>
+        <dsName>Threads</dsName>
+        <dsType>gauge</dsType>
+        <collect>Threads#PERF_COUNTER_RAWCOUNT</collect>
+    </ds>
+    <ds>
+        <dsName>QueueLength</dsName>
+        <dsType>gauge</dsType>
+        <collect>ProcessorQueueLength#PERF_COUNTER_RAWCOUNT</collect>
+    </ds>
+    <ds>
+        <dsName>CtxtSwitches</dsName>
+        <dsType>counter</dsType>
+        <collect>ContextSwitchesPerSec#PERF_COUNTER_COUNTER</collect>
+    </ds>
+    <ds>
+        <dsName>ExceptionDispatches</dsName>
+        <dsType>counter</dsType>
+        <collect>ExceptionDispatchesPerSec#PERF_COUNTER_COUNTER</collect>
+    </ds>
+    <ds>
+        <dsName>SystemCalls</dsName>
+        <dsType>counter</dsType>
+        <collect>SystemCallsPerSec#PERF_COUNTER_COUNTER</collect>
+    </ds>
+    <graphs>
+        <name>threads</name>
+        <name>Context switches</name>
+    </graphs>
+</probedesc>

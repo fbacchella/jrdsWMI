@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE probedesc PUBLIC "-//jrds//DTD Probe Description//EN" "urn:jrds:probedesc">
+<probedesc>
+    <name>Process</name>
+    <probeName>process_${index}</probeName>
+    <probeClass>jrds.wmi.Win32_Process</probeClass>
+    <specific name="wbemClass">Win32_Process</specific>
+    <defaultargs>
+        <arg type="String" value="_Total" />
+    </defaultargs>
+    <ds>
+        <dsName>HandleCount</dsName>
+        <dsType>gauge</dsType>
+        <collect />
+    </ds>
+    <ds>
+        <dsName>ProcessCount</dsName>
+        <dsType>gauge</dsType>
+        <collect />
+    </ds>
+    <ds>
+        <dsName>ThreadCount</dsName>
+        <dsType>gauge</dsType>
+    </ds>
+    <ds>
+        <dsName>VirtualSize</dsName>
+        <dsType>gauge</dsType>
+    </ds>
+    <ds>
+        <dsName>WorkingSetSize</dsName>
+        <dsType>gauge</dsType>
+    </ds>
+    <ds>
+        <dsName>PageFileUsage</dsName>
+        <dsType>gauge</dsType>
+    </ds>
+    <ds>
+        <dsName>PrivatePageCount</dsName>
+        <dsType>gauge</dsType>
+    </ds>
+    <ds>
+        <dsName>UserModeTime</dsName>
+        <dsType>counter</dsType>
+        <collect>UserModeTime#UNIT_100NSEC</collect>
+    </ds>
+    <ds>
+        <dsName>KernelModeTime</dsName>
+        <dsType>counter</dsType>
+        <collect>KernelModeTime#UNIT_100NSEC</collect>
+    </ds>
+    <ds>
+        <dsName>PageFaults</dsName>
+        <dsType>counter</dsType>
+    </ds>
+    <graphs>
+        <name>Win32_Process-threads</name>
+        <name>Win32_Process-time</name>
+        <name>Win32_Process-memusage</name>
+    </graphs>
+</probedesc>

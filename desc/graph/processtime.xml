@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE graphdesc PUBLIC "-//jrds//DTD Graph Description//EN" "urn:jrds:graphdesc">
+<graphdesc>
+    <name>Win32_Process-time</name>
+    <graphName>pstime-{2}</graphName>
+    <graphTitle>CPU Time for {2}</graphTitle>
+    <verticalLabel>s</verticalLabel>
+    <lowerLimit>0</lowerLimit>
+    <add>
+        <name>KernelModeTime</name>
+        <graphType>area</graphType>
+        <color>red</color>
+        <legend>System mode time</legend>
+    </add>
+    <add>
+        <name>UserModeTime</name>
+        <graphType>stack</graphType>
+        <color>green</color>
+        <legend>User mode time</legend>
+    </add>
+    <hosttree>
+        <pathelement>HOST</pathelement>
+        <pathelement>SYSTEM</pathelement>
+        <pathstring>Processus</pathstring>
+        <pathelement>INDEX</pathelement>
+        <pathstring>CPU Time</pathstring>
+    </hosttree>
+    <viewtree>
+        <pathelement>SYSTEM</pathelement>
+        <pathstring>Processus</pathstring>
+        <pathelement>HOST</pathelement>
+        <pathelement>INDEX</pathelement>
+        <pathstring>CPU Time</pathstring>
+    </viewtree>
+</graphdesc>

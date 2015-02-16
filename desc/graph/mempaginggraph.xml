@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE graphdesc PUBLIC "-//jrds//DTD Graph Description//EN"
+                           "urn:jrds:graphdesc">
+<graphdesc>
+    <name>Win32Paging</name>
+    <graphName>paging</graphName>
+    <graphTitle>Paging activity on ${host}</graphTitle>
+    <verticalLabel>Page/s</verticalLabel>
+    <add>
+        <name>PagesInputPerSec</name>
+        <graphType>line</graphType>
+    </add>
+    <add>
+        <name>PagesOutputPerSec</name>
+        <graphType>line</graphType>
+    </add>
+    <hosttree>
+        <pathelement>HOST</pathelement>
+        <pathelement>SYSTEM</pathelement>
+        <pathelement>MEMORY</pathelement>
+        <pathstring>Paging activity</pathstring>
+    </hosttree>
+    <viewtree>
+        <pathelement>SYSTEM</pathelement>
+        <pathelement>MEMORY</pathelement>
+        <pathstring>Paging activity</pathstring>
+        <pathelement>HOST</pathelement>
+    </viewtree>
+</graphdesc>

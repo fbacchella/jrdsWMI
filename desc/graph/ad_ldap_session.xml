@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE graphdesc PUBLIC "-//jrds//DTD Graph Description//EN"
+                           "urn:jrds:graphdesc">
+<graphdesc>
+    <name>LDAPSessions</name>
+    <graphName>ldap_sessions</graphName>
+    <graphTitle>AD LDAP Sessions on ${host}</graphTitle>
+    <verticalLabel>op/s</verticalLabel>
+    <add>
+        <name>LDAPClientSessions</name>
+        <graphType>area</graphType>
+        <legend>Client sessions</legend>
+    </add>
+    <hosttree>
+        <pathelement>HOST</pathelement>
+        <pathelement>SERVICES</pathelement>
+        <pathstring>Active Directory</pathstring>
+        <pathstring>LDAP Sessions</pathstring>
+    </hosttree>
+    <viewtree>
+        <pathelement>SERVICES</pathelement>
+        <pathstring>Active Directory</pathstring>
+        <pathstring>LDAP Sessions</pathstring>
+        <pathelement>HOST</pathelement>
+    </viewtree>
+</graphdesc>

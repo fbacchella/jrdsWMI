@@ -1,0 +1,144 @@
+http://msdn.microsoft.com/en-us/library/aa394569(VS.85).aspx
+PERF_COUNTER_TEXT
+Decimal 2816
+This counter type shows a variable-length text string in Unicode. It does not display calculated values.
+
+PERF_COUNTER_RAWCOUNT
+Decimal 65536
+Raw counter value that does not require calculations, and represents one sample which is the last observed value only.
+
+PERF_COUNTER_LARGE_RAWCOUNT
+Decimal 65792
+Same as PERF_COUNTER_RAWCOUNT, but a 64-bit representation for larger values.
+
+PERF_COUNTER_RAWCOUNT_HEX
+0
+Most recently observed value in hexadecimal format. It does not display an average.
+
+PERF_COUNTER_LARGE_RAWCOUNT_HEX
+Decimal 256
+
+PERF_RAW_FRACTION
+Decimal 537003008
+Ratio of a subset to its set as a percentage. This counter type displays the current percentage only, not an average over time.
+
+PERF_SAMPLE_FRACTION
+Decimal 549585920
+Average ratio of hits to all operations during the last two sample intervals. This counter type requires a base property with the PERF_SAMPLE_BASE counter type.
+
+PERF_COUNTER_DELTA
+Decimal 4195328
+This counter type shows the change in the measured attribute between the two most recent sample intervals.
+
+PERF_COUNTER_LARGE_DELTA
+Decimal 4195584
+Same as PERF_COUNTER_DELTA but a 64-bit representation for larger values.
+
+PERF_ELAPSED_TIME
+Decimal 807666944
+Total time between when the process started and the time when this value is calculated.
+
+PERF_AVERAGE_BULK
+Decimal 1073874176
+Number of items processed, on average, during an operation. This counter type displays a ratio of the items processed (such as bytes sent) to the number of operations completed, and requires a base property with PERF_AVERAGE_BASE as the counter type.
+
+PERF_COUNTER_COUNTER
+Decimal 272696320
+Average number of operations completed during each second of the sample interval.
+
+PERF_SAMPLE_COUNTER
+Decimal 4260864
+Average number of operations completed in one second. This counter type requires a base property with the counter type PERF_SAMPLE_BASE.
+
+PERF_COUNTER_BULK_COUNT
+Decimal 272696576
+Average number of operations completed during each second of the sample interval. This counter type is the same as the PERF_COUNTER_COUNTER type, but it uses larger fields to accommodate larger values.
+
+PERF_COUNTER_TIMER
+Decimal 541132032
+Average time that a component is active as a percentage of the total sample time.
+
+PERF_COUNTER_TIMER_INV
+Decimal 557909248
+Average percentage of time observed during sample interval that the object is not active. This counter type is the same as PERF_100NSEC_TIMER_INV except that it measures time in units of ticks of the system performance timer rather than in 100ns units.
+
+PERF_AVERAGE_TIMER
+Decimal 805438464
+Average time to complete a process or operation. This counter type displays a ratio of the total elapsed time of the sample interval to the number of processes or operations completed during that time.
+This counter type requires a base property with PERF_AVERAGE_BASE as the counter type.
+
+PERF_100NSEC_TIMER
+Decimal 542180608
+Active time of one component as a percentage of the total elapsed time in units of 100ns of the sample interval.
+
+PERF_100NSEC_TIMER_INV
+Decimal 558957824
+Percentage of time the object was not in use. This counter type is the same as PERF_COUNTER_TIMER_INV except that it measures time in 100ns units rather than in system performance timer ticks.
+
+PERF_COUNTER_MULTI_TIMER
+Decimal 574686464
+Active time of one or more components as a percentage of the total time of the sample interval. This counter type differs from PERF_100NSEC_MULTI_TIMER in that it measures time in units of ticks of the system performance timer, rather than in 100ns units.
+This counter type requires a base property with the PERF_COUNTER_MULTI_BASE counter type.
+
+PERF_COUNTER_MULTI_TIMER_INV
+Decimal 591463680
+Inactive time of one or more components as a percentage of the total time of the sample interval. This counter type differs from PERF_100NSEC_MULTI_TIMER_INV in that it measures time in units of ticks of the system performance timer, rather than in 100ns units.
+This counter type requires a base property with the PERF_COUNTER_MULTI_BASE counter type.
+
+PERF_100NSEC_MULTI_TIMER
+Decimal 575735040
+This counter type shows the active time of one or more components as a percentage of the total time (100ns units) of the sample interval.
+This counter type requires a base property with the PERF_COUNTER_MULTI_BASE counter type.
+
+PERF_100NSEC_MULTI_TIMER_INV
+Decimal 592512256
+Inactive time of one or more components as a percentage of the total time of the sample interval. Counters of this type measure time in 100ns units.
+This counter type requires a base property with the PERF_COUNTER_MULTI_BASE counter type.
+
+PERF_OBJ_TIME_TIMER
+Decimal 543229184
+A 64-bit timer in object-specific units.
+
+PERF_PRECISION_SYSTEM_TIMER
+Decimal 541525248
+Similar to PERF_COUNTER_TIMER except that it uses a counter defined time base instead of the system timestamp.
+
+PERF_PRECISION_100NS_TIMER
+Decimal 542573824
+Similar to PERF_100NSEC_TIMER except that it uses a 100ns counter defined time base instead of the system 100ns timestamp.
+
+PERF_COUNTER_QUEUELEN_TYPE
+Decimal 4523008
+Average length of a queue to a resource over time. It shows the difference between the queue lengths observed during the last two sample intervals divided by the duration of the interval.
+
+PERF_COUNTER_LARGE_QUEUELEN_TYPE
+Decimal 4523264
+Average length of a queue to a resource over time. Counters of this type display the difference between the queue lengths observed during the last two sample intervals, divided by the duration of the interval.
+
+PERF_COUNTER_100NS_QUEUELEN_TYPE
+Decimal 5571840
+Average length of a queue to a resource over time in 100 nanosecond units.
+
+PERF_COUNTER_OBJ_TIME_QUEUELEN_TYPE
+Decimal 6620416
+Time an object is in a queue.
+
+PERF_AVERAGE_BASE
+Decimal 1073939458
+Base value used to calculate the PERF_AVERAGE_TIMER and PERF_AVERAGE_BULK counter types.
+
+PERF_COUNTER_MULTI_BASE
+Decimal 1107494144
+Base value used to calculate the PERF_COUNTER_MULTI_TIMER, PERF_COUNTER_MULTI_TIMER_INV, PERF_100NSEC_MULTI_TIMER, and PERF_100NSEC_MULTI_TIMER_INV counter types.
+
+PERF_LARGE_RAW_BASE
+Decimal 1073939712
+Base value found in the calculation of PERF_RAW_FRACTION, 64 bits.
+
+PERF_RAW_BASE
+Decimal 1073939459
+Base value used to calculate the PERF_RAW_FRACTION counter type.
+
+PERF_SAMPLE_BASE
+Decimal 1073939457
+Base value used to calculate the PERF_SAMPLE_COUNTER and PERF_SAMPLE_FRACTION counter types.

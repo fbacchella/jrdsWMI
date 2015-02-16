@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE graphdesc PUBLIC "-//jrds//DTD Graph Description//EN"
+                           "urn:jrds:graphdesc">
+<graphdesc>
+    <name>Win32VirtualMem</name>
+    <graphName>virtmemory</graphName>
+    <graphTitle>Memory usage on ${host}</graphTitle>
+    <unit>
+        <binary />
+    </unit>
+    <verticalLabel>Bytes</verticalLabel>
+    <add>
+        <legend>Non pageable memory</legend>
+    </add>
+    <add>
+        <name>PoolNonpagedBytes</name>
+        <graphType>area</graphType>
+    </add>
+    <add>
+        <legend>Pageable memory</legend>
+    </add>
+    <add>
+        <name>CommittedBytes</name>
+        <graphType>stack</graphType>
+    </add>
+    <add>
+        <legend>Free memory</legend>
+    </add>
+    <add>
+        <name>AvailableBytes</name>
+        <graphType>stack</graphType>
+    </add>
+    <hosttree>
+        <pathelement>HOST</pathelement>
+        <pathelement>SYSTEM</pathelement>
+        <pathelement>MEMORY</pathelement>
+        <pathstring>Virtual memory usage</pathstring>
+    </hosttree>
+    <viewtree>
+        <pathelement>SYSTEM</pathelement>
+        <pathelement>MEMORY</pathelement>
+        <pathstring>Virtual memory usage</pathstring>
+        <pathelement>HOST</pathelement>
+    </viewtree>
+</graphdesc>

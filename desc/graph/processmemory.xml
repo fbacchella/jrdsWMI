@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE graphdesc PUBLIC "-//jrds//DTD Graph Description//EN" "urn:jrds:graphdesc">
+<graphdesc>
+    <name>Win32_Process-memusage</name>
+    <graphName>psmem-{2}</graphName>
+    <graphTitle>Average memory usage for {2}</graphTitle>
+    <unit>
+        <binary />
+    </unit>
+    <verticalLabel>Bytes</verticalLabel>
+    <lowerLimit>0</lowerLimit>
+    <add>
+        <name>VirtualSize</name>
+        <graphType>line</graphType>
+        <legend>Current size of the virtual address space</legend>
+    </add>
+    <add>
+        <name>WorkingSetSize</name>
+        <graphType>line</graphType>
+        <legend>Amount of memory needed to execute efficiently</legend>
+    </add>
+    <add>
+        <name>PageFileUsage</name>
+    </add>
+    <add>
+        <rpn>PageFileUsage, 1024, *</rpn>
+        <graphType>line</graphType>
+        <legend>Amount of page file space currently used</legend>
+    </add>
+    <hosttree>
+        <pathelement>HOST</pathelement>
+        <pathelement>SYSTEM</pathelement>
+        <pathstring>Processus</pathstring>
+        <pathelement>INDEX</pathelement>
+        <pathstring>Memory usage</pathstring>
+    </hosttree>
+    <viewtree>
+        <pathelement>SYSTEM</pathelement>
+        <pathstring>Processus</pathstring>
+        <pathelement>HOST</pathelement>
+        <pathelement>INDEX</pathelement>
+        <pathstring>Memory usage</pathstring>
+    </viewtree>
+</graphdesc>
